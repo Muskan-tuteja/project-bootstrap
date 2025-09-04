@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Allura&display=swap");
+
+.navbar-brand {
+  font-weight: 600;
+  font-size: 30px;
+  color: goldenrod;
+}
+.navbar-brand span {
+  font-weight: 600;
+  font-size: 1.4em;
+  font-family: "Allura", cursive;
+}
+
+.nav-link {
+  color: black;
+  font-size: 0.9rem;
+  font-size: 20px;
+}
+.nav-link:hover,
+.active,
+.fa-bag-shopping:hover {
+  color: rgb(247, 180, 9) !important;
+  text-decoration: underline;
+  
+}
+
+.nav-item {
+  padding-inline: 1.5rem;
+}
+
+/* basics style */
+li{
+  list-style: none;
+}
+a{
+  text-decoration: none;
+}
+img{
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.nav-icons a{
+  font-size: 1.2rem;
+  padding-inline: .5rem ;
+  color: black;
+}
+.fa-bag-shopping{
+  font-size: 1.1rem;
+  background: rgba(255, 246, 246, 0.76);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
+}
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 990px){
+  .navbar-collapse{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+     background: rgba(255, 246, 246, 0);
+     padding-top: 2rem;
+     margin-top: 5.6rem;
+  }
+  .navbar-nav{
+    align-items: center;
+    gap: 1rem;
+  }
+  
+}
