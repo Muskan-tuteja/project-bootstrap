@@ -46,12 +46,58 @@ img {
 }
 .fa-bag-shopping {
   font-size: 1.1rem;
-  background: rgba(255, 246, 246, 0.76);
+  background: rgba(255, 246, 246, 0.503);
   width: 40px;
   height: 40px;
   border-radius: 50%;
   text-align: center;
   line-height: 40px;
+}
+.hero {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* full screen height */
+      background: url("images/hero.png") no-repeat center center/cover;
+    }
+
+    /* Navbar ko hero ke upar laye */
+    .navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 10;
+    }
+      .navbar:hover{
+        background-color: rgba(255, 255, 255, 0.37);
+      }
+
+    /* Hero content center me */
+    .hero-content {
+      position: absolute;
+      top: 50%;
+      left: 30%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+    }
+    .btn{
+      background-color: rgb(247, 180, 9);
+      color:white
+    }
+    .btn:hover{
+      background-color: rgb(247, 180, 9);
+color: black;
+
+    }
+    .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+.carousel-item img {
+  width: 100%;
+  height: 400px; /* apne hisaab se set kar sakti ho */
+  object-fit: cover; /* image ko crop karke fit karega */
 }
 
 @media screen and (max-width: 990px) {
@@ -60,12 +106,17 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    background: rgba(255, 246, 246, 0);
+    background: rgb(255, 246, 246);
     padding-top: 2rem;
     margin-top: 5.6rem;
   }
   .navbar-nav {
     align-items: center;
     gap: 1rem;
+  }
+  .hero-content{
+      top: 50%;
+      left: 34%;
+
   }
 }
