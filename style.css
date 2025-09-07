@@ -81,15 +81,36 @@ img {
       color: white;
       text-align: center;
     }
-    .btn{
-      background-color: rgb(247, 180, 9);
-      color:white
-    }
-    .btn:hover{
-      background-color: rgb(247, 180, 9);
-color: black;
+    /* From Uiverse.io by barisdogansutcu */ 
+button {
+  padding: 17px 40px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 0;
+  background-color: white;
+  box-shadow: rgb(0 0 0 / 5%) 0 0 8px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.5s ease;
+}
 
-    }
+button:hover {
+  letter-spacing: 3px;
+  background-color: rgb(247, 180, 9);
+  color: hsl(0, 0%, 100%);
+  box-shadow:rgb(247, 180, 9) 0px 7px 29px 0px;
+}
+
+button:active {
+  letter-spacing: 3px;
+  background-color: rgb(247, 180, 9);
+  color: hsl(0, 0%, 100%);
+  box-shadow:rgb(247, 180, 9) 0px 0px 0px 0px;
+  transform: translateY(10px);
+  transition: 100ms;
+}
+
     .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
@@ -108,6 +129,38 @@ color: black;
     color: rgb(247, 180, 9);
     text-decoration: underline;
 }
+/* From Uiverse.io by satyamchaudharydev */ 
+/* inspired form gumroad website */
+.button {
+  --bg: #000;
+  --hover-bg: rgb(247, 180, 9);
+  --hover-text: #000;
+  color: #fff;
+  cursor: pointer;
+  border: 1px solid var(--bg);
+  border-radius: 4px;
+  padding: 0.8em 2em;
+  background: var(--bg);
+  transition: 0.2s;
+}
+
+.button:hover {
+  color: var(--hover-text);
+  transform: translate(-0.25rem, -0.25rem);
+  background: var(--hover-bg);
+  box-shadow: 0.25rem 0.25rem var(--bg);
+}
+
+.button:active {
+  transform: translate(0);
+  box-shadow: none;
+}
+
+/* footer multiple */
+.btn{
+  background-color: rgb(247, 180, 9);
+}
+
 
 
 @media screen and (max-width: 990px) {
