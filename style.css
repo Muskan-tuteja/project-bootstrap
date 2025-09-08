@@ -82,7 +82,7 @@ img {
       text-align: center;
     }
     /* From Uiverse.io by barisdogansutcu */ 
-button {
+.btn1 {
   padding: 17px 40px;
   border-radius: 50px;
   cursor: pointer;
@@ -95,21 +95,21 @@ button {
   transition: all 0.5s ease;
 }
 
-button:hover {
+.btn1:hover {
   letter-spacing: 3px;
   background-color: rgb(247, 180, 9);
   color: hsl(0, 0%, 100%);
   box-shadow:rgb(247, 180, 9) 0px 7px 29px 0px;
 }
 
-button:active {
+/* button:active {
   letter-spacing: 3px;
   background-color: rgb(247, 180, 9);
   color: hsl(0, 0%, 100%);
   box-shadow:rgb(247, 180, 9) 0px 0px 0px 0px;
   transform: translateY(10px);
   transition: 100ms;
-}
+} */
 
     .marketing .col-lg-4 {
     margin-bottom: 1.5rem;
