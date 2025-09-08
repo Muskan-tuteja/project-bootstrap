@@ -129,8 +129,7 @@ img {
     color: rgb(247, 180, 9);
     text-decoration: underline;
 }
-/* From Uiverse.io by satyamchaudharydev */ 
-/* inspired form gumroad website */
+
 .button {
   --bg: #000;
   --hover-bg: rgb(247, 180, 9);
@@ -156,9 +155,14 @@ img {
   box-shadow: none;
 }
 
-/* footer multiple */
+/* footer  */
 .btn{
   background-color: rgb(247, 180, 9);
+}
+.btn:hover{
+  background-color: rgb(247, 180, 9);
+  box-shadow: 2px 2px 9px ;
+  
 }
 
 
