@@ -1,3 +1,7 @@
+
+
+// 1. Product list
+
 let containerData = {
   container: [
     {
@@ -85,20 +89,23 @@ let containerData = {
 };
 
 let data = containerData.container; // your products array
+// 2. Load Cart
 onLoad(data);
 
 function onLoad(data) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
   let cartLeft = document.querySelector(".cart-left");
 
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+   // Only those products which are in cart
     let cartData = data.filter((item) => cart.includes(item.id));
   
   // Update cart count
   if (cart.length !== 0)
-
   document.querySelector(".bag-count").textContent = cart.length;
-  console.log(cart.length)
 
+
+  // Make HTML
   let items = ``;
   cartData.forEach((item) => {
     items += `
@@ -107,9 +114,9 @@ function onLoad(data) {
           <img src="${item.image}" alt="" />
           <div class="cart-detalis">
             <h2>${item.title}</h2>
-            <div class="price">${item.price}
+            <div class="price">₹${item.price}
               
-              <span class="price-small">${item.price1}</span>
+              <span class="price-small">₹${item.price1}</span>
             </div>
 
             <div class="price-discount">${item.pricediscount}%off</div>
@@ -118,20 +125,22 @@ function onLoad(data) {
     `;
   });
 
+  // Show items in cart-left box
   cartLeft.innerHTML = items;
 
   // Add to cart functionality
   const buttons = document.querySelectorAll(".fa-circle-xmark");
 
+   // Remove item when 'x' clicked
   buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
       let id = Number(btn.getAttribute("data-id"));
 
-      cart = cart.filter((i) => id != i);
-      localStorage.setItem("cart", JSON.stringify(cart));
+      cart = cart.filter((i) => id != i); // Remove from cart
+      localStorage.setItem("cart", JSON.stringify(cart)); // Save new cart
           
-      console.log(cart);
-      onLoad(data);
+     
+    onLoad(data);  // Reload cart
      
      
     });
