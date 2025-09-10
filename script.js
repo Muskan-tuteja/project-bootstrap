@@ -92,7 +92,7 @@ function onLoad(data) {
   let cart = JSON.parse(localStorage.getItem("cart")) || [];
   if (cart.length !== 0)
     document.querySelector(".bag-count").textContent = cart.length;
-  console.log(cart.length)
+
   let items = ``;
 
   data.forEach((item) => {
@@ -126,11 +126,14 @@ function onLoad(data) {
     button.addEventListener("click", () => {
       let but = Number(button.getAttribute("data-id"));
 
-      if (!cart.includes(but)) {
+      if (cart.includes(but)) {
+        alert("This product is already in your cart");
+        return;
+      }
         cart.push(but);
         document.querySelector(".bag-count").textContent = cart.length;
         localStorage.setItem("cart", JSON.stringify(cart));
-      }
+      
     });
   });
 }
