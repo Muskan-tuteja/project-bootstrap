@@ -107,6 +107,7 @@ function onLoad(data) {
 
   // Make HTML
   let items = ``;
+  let totalMRP = 0
   cartData.forEach((item) => {
     items += `
       <div class="cart-lefts">
@@ -122,11 +123,20 @@ function onLoad(data) {
             <div class="price-discount">${item.pricediscount}%off</div>
           </div>
         </div> 
+       
+
     `;
+    totalMRP += item.price;
+
   });
 
   // Show items in cart-left box
   cartLeft.innerHTML = items;
+    document.querySelector(".total-mrp").innerHTML = totalMRP;
+      document.querySelector(".total-discount").innerHTML = Math.max(Number(totalMRP - 1000,0 ))
+
+  document.querySelector(".total-amount").innerHTML = (totalMRP + 20).toFixed(2) ;
+ 
 
   // Add to cart functionality
   const buttons = document.querySelectorAll(".fa-circle-xmark");
